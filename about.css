@@ -1,0 +1,174 @@
+/* === About Section Base === */
+.about-section {
+  width: 100vw;
+  height: 90vh;              /* Fit exactly screen height */
+  padding: 40px 6%;           /* Reduced padding */
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* Center content vertically */
+  overflow: hidden;           /* Prevent extra scroll */
+}
+
+/* Header */
+.about-header {
+  margin-top: 1rem;
+  text-align: center;
+  /* top: 50px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+ /* margin: 0 auto 0px auto; */
+  /* Reduced bottom space */
+  opacity: 0;
+  /* transform: translateY(20px); */
+  animation: fadeSlideIn 1s forwards;
+ 
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-label {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #051b1c;
+  font-weight: 600;
+}
+
+/* Section Divider */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 30px 0;
+  /* 🔥 Reduced from 100px */
+  width: 100%;
+}
+
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d4af37,
+    #f5e6a6,
+    #d4af37,
+    transparent
+  );
+}
+
+.section-divider h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;           /* Slightly smaller */
+  font-weight: 600;
+  color: #b8902c;
+  margin: 0;
+}
+
+/* Content area */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;                  /* Reduced gap */
+  flex: 1;                    /* Take remaining height */
+}
+
+/* Text */
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  font-size: 28px;           /* Reduced size */
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* Stats */
+.about-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.about-stats div {
+  text-align: center;
+}
+
+.about-stats h4 {
+  font-size: 28px;
+  margin: 0;
+  color: #b8902c;
+}
+
+.about-stats span {
+  font-size: 12px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+/* Image */.about-image {
+  flex: 1;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  max-height: 400px;   /* 🔥 Control the height */
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* Prevent stretching */
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Floating Badge */
+.floating-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-section {
+    height: auto;            /* Allow natural height on mobile */
+    padding: 60px 6%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

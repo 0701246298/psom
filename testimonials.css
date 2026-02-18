@@ -1,0 +1,244 @@
+/* ============================= */
+/* LUXURY WHITE TESTIMONIALS    */
+/* ============================= */
+
+.testimonials-section {
+  padding: 120px 6%;
+  text-align: center;
+ 
+  overflow: hidden;
+  color: #111;
+  
+
+  /* Soft animated white gradient */
+  background: linear-gradient(-45deg, #ffffff, #f8f9fb, #eef1f5, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientFlow 18s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Soft floating light */
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.6), transparent 60%);
+  animation: parallaxMove 30s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes parallaxMove {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-4%, -4%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ============================= */
+/* HEADER                       */
+/* ============================= */
+
+.section-label {
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #888;
+}
+
+.testimonials-header h2 {
+  font-size: 48px;
+  font-weight: 600;
+  margin: 15px 0;
+  color: #111;
+}
+
+.testimonials-header p {
+  color: #555;
+  font-size: 20px;
+  margin-bottom: 80px;
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* CAROUSEL (NO SLIDING)        */
+/* ============================= */
+/* ============================= */
+/* GRID LAYOUT                  */
+/* ============================= */
+
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  animation: none;
+  width: 100%;
+}
+
+
+/* ============================= */
+/* CARD CONTAINER               */
+/* ============================= */
+
+.testimonial-card {
+  width: 280px;
+  height: 360px;
+  perspective: 1200px;
+  flex-shrink: 0;
+  position: relative;
+
+  /* Scroll reveal animation */
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  animation: revealCard linear forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
+}
+
+@keyframes revealCard {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================= */
+/* INNER 3D STRUCTURE           */
+/* ============================= */
+
+.card-inner {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.testimonial-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* ============================= */
+/* FRONT & BACK                 */
+/* ============================= */
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  backface-visibility: hidden;
+
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.4s ease;
+}
+
+/* Subtle hover lift */
+.testimonial-card:hover .card-front,
+.testimonial-card:hover .card-back {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================= */
+/* FRONT CONTENT                */
+/* ============================= */
+
+.card-front img {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card-front h3 {
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #111;
+}
+
+.card-front span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ============================= */
+/* BACK CONTENT                 */
+/* ============================= */
+
+.card-back {
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.card-back p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #000;
+  opacity: 0.9;
+  font-weight: bolder;
+}
+
+/* ============================= */
+/* SOFT SPOTLIGHT EFFECT        */
+/* ============================= */
+
+.testimonial-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.6), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.testimonial-card:hover::after {
+  opacity: 1;
+}
+
+/* ============================= */
+/* RESPONSIVE                   */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .testimonials-header h2 {
+    font-size: 32px;
+  }
+
+  .testimonial-card {
+    width: 240px;
+    height: 330px;
+  }
+
+  .testimonials-header p {
+    font-size: 18px;
+  }
+}

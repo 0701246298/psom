@@ -1,0 +1,288 @@
+/* ===================================== */
+/* LUXURY TEAM SECTION                   */
+/* ===================================== */
+
+.team-section {
+  padding: 120px 8%;
+  background: linear-gradient(135deg, #f8f9fb, #ffffff);
+  color: #1a1a1a;
+  position: relative;
+  
+}
+
+/* Soft glow background */
+.team-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(49, 211, 92, 0.08), transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(31, 38, 135, 0.05), transparent 40%);
+  pointer-events: none;
+}
+
+/* ===================================== */
+/* HEADER                                */
+/* ===================================== */
+
+.team-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 100px auto;
+  opacity: 0.711;
+}
+
+.section-label {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #b8902c;
+  font-weight: 600;
+}
+
+.team-header h2 {
+  font-size: 48px;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.team-header p {
+  color: #b8902c;
+  font-size: 18px;
+}
+
+/* ===================================== */
+/* FOUNDERS - PREMIUM STYLE              */
+/* ===================================== */
+
+.founders-section {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.founders-title {
+  font-size: 26px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  opacity: 0.711;
+}
+
+.founders-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.founder-card {
+  width: 320px;
+  padding: 50px 40px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  transition: all 0.6s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 35px 80px rgba(31, 38, 135, 0.25);
+}
+
+.founder-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.founder-card:hover img {
+  transform: scale(1.1);
+}
+
+.founder-card h4 {
+  margin: 15px 0 5px 0;
+  font-size: 22px;
+  color: #b8902c;
+}
+
+.founder-card p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #b8902c;
+  text-transform: uppercase;
+}
+
+/* Social Icons */
+.founder-socials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.founder-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2d314d;
+  font-size: 14px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.founder-socials a:hover {
+  background: #b8902c;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/* ===================================== */
+/* DIVIDER                               */
+/* ===================================== */
+.team-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin: 100px 0 80px 0;
+  width: 100%;
+}
+.team-divider::before,
+.team-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  position: relative;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+.team-divider::before,
+.team-divider::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d4af37,
+    #f5e6a6,
+    #d4af37,
+    transparent
+  );
+}
+
+
+/* Heading Style */
+#member {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 600;
+   color: #b8902c;
+  text-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+  white-space: nowrap;
+  margin: 0;
+  opacity: 0.611;
+  
+}
+
+
+/* ===================================== */
+/* TEAM GRID - 4 BY 4 LUXURY LAYOUT     */
+/* ===================================== */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+/* Smaller elegant team cards */
+.team-card {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.5s ease;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle gradient overlay on hover */
+.team-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(49,211,92,0.08), rgba(31,38,135,0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.team-card:hover::before {
+  opacity: 1;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(31, 38, 135, 0.2);
+}
+
+.team-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.08);
+}
+
+.team-card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 18px;
+}
+
+.team-card p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #b8902c;
+  text-transform: uppercase;
+}
+
+/* ===================================== */
+/* RESPONSIVE                            */
+/* ===================================== */
+
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .founders-wrapper {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-header h2 {
+    font-size: 34px;
+  }
+}

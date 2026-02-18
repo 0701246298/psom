@@ -1,0 +1,111 @@
+/* ============================= */
+/* FOOTER SOCIAL 3D LABELS      */
+/* ============================= */
+
+
+/* Footer Styles */
+.main-footer {
+  background: #b8902c;
+  color: white;
+  padding: 50px 8%;
+ overflow-x: hidden;
+  margin-left: 0px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #31d35c;
+}
+
+.footer-bottom {
+  text-align: center;
+  justify-content: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 20px;
+  font-size: 14px;
+}
+.footer-bottom p{
+  
+   margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
+/* ============================= */
+/* 3D NEON SOCIAL LABELS        */
+ .footer-socials {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-label i {
+  font-size: 16px;
+}
+
+/* Individual Colors */
+.facebook {
+  background-color: #1877f2;
+}
+
+.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.twitter {
+  background-color: #000000;
+}
+
+/* Hover Effect */
+.social-label:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
