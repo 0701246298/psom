@@ -22,8 +22,12 @@ body{
 
 /* NAVBAR */
 .navbar{
+  z-index: 3;
   display:flex;
   justify-content:space-between;
+  position: fixed;
+  width: 100%;
+  top: 0px;
   align-items:center;
   margin-bottom:70px;
 }
